@@ -4,14 +4,11 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
-import com.google.common.cache.Cache;
 
 public class CalculatorHomework {
 	
 	public List<String> list;
 	
-    Cache clasaDinLibrarie;
-    
 	public static void main(String[] args) {
 //		String operator = "*";
 //		double a = 4, b = 2;
