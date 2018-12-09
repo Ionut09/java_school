@@ -10,23 +10,23 @@ public class CalculatorHomework {
 	public List<String> list;
 	
 	public static void main(String[] args) {
-//		String operator = "*";
-//		double a = 4, b = 2;
-//		switch (operator) {
-//		case "+":
-//			calculateSum(a, b);
-//			return;
-//		case "-":
-//			calculateDif(a, b);
-//			return;
-//		case "/":
-//			calculateDiv(a, b);
-//			return;
-//		case "*":
-//			calculateProd(a, b);
-//			return;
-//		}
-//		System.out.println();
+		String operator = "*";
+		double a = 4, b = 2;
+		switch (operator) {
+		case "+":
+			calculateSum(a, b);
+			return;
+		case "-":
+			calculateDif(a, b);
+			return;
+		case "/":
+			calculateDiv(a, b);
+			return;
+		case "*":
+			calculateProd(a, b);
+			return;
+		}
+		System.out.println();
 		
 		List<String> list = new ArrayList<>();
 		list.add("Dragos");
