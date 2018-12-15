@@ -1,7 +1,5 @@
 package com.oop.concepts;
 
-import com.sun.org.apache.xpath.internal.functions.FuncExtElementAvailable;
-
 public class Car {
 
 	private float fuelLevel; // 0.0f
