@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>230</x>
+      <y>0</y>
+      <w>100</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>Book
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>150</x>
+      <y>20</y>
+      <w>130</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+&lt;&lt;extends&gt;&gt;</panel_attributes>
+    <additional_attributes>90.0;10.0;10.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>620</x>
+      <y>250</y>
+      <w>330</w>
+      <h>370</h>
+    </coordinates>
+    <panel_attributes>LibraryCatalog
+--
+private List&lt;Book&gt; bookList = new ArrayList&lt;&gt;();
+--
+@Override
+void addBook(Book book){
+     //implementation here
+}
+
+@Override
+boolean deleteBookByName(String bookName){
+     //implementation here
+}
+
+@Override
+Book findByName(String bookName){
+     //implementation here
+}
+
+@Override
+void printAllBooks(){
+     //implementation here
+}
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>110</x>
+      <y>120</y>
+      <w>100</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>ArtAlbum
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>310</x>
+      <y>20</y>
+      <w>130</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+&lt;&lt;extends&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;90.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>350</x>
+      <y>120</y>
+      <w>100</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>Novel
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>630</x>
+      <y>30</y>
+      <w>310</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>interface: Library
+--
+void addBook(Book book);
+boolean deleteBookByName(String bookName);
+Book findByName(String bookName);
+void printAllBooks();
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>760</x>
+      <y>150</y>
+      <w>120</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.
+&lt;&lt;implements&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>120</x>
+      <y>440</y>
+      <w>260</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>LibraryApp
+--
+public static void main(String[] args){
+	//use the LibraryCatalog here
+}
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
