@@ -1,4 +1,4 @@
-package com.oop.concepts.polimorphism;
+package com.oop.concepts1.polimorphism;
 
 public class OOP {
 
@@ -51,5 +51,9 @@ public class OOP {
 		
 		//Animal anim = new Animal();
 		//is abstract, so it cannot be instantiated
+		
+		
+		Animal horse2 = new Horse();
+		Animal sleep = horse2.sleep();
 	}
 }

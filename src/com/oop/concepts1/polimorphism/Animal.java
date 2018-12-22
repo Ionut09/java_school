@@ -1,4 +1,4 @@
-package com.oop.concepts.polimorphism;
+package com.oop.concepts1.polimorphism;
 
 public abstract class Animal {
 
@@ -14,6 +14,8 @@ public abstract class Animal {
 	public void eats() {
 		System.out.println("Animal eats!!!");
 	}
+	
+	public abstract Animal sleep();
 
 	public void sleep(Animal a) throws ArithmeticException {
 		// System.out.println(a.sleep(a));

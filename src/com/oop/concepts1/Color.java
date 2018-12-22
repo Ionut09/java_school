@@ -1,4 +1,4 @@
-package com.oop.concepts;
+package com.oop.concepts1;
 
 public class Color {
 	private long waveLength;

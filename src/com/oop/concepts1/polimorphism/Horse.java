@@ -1,10 +1,10 @@
-package com.oop.concepts.polimorphism;
+package com.oop.concepts1.polimorphism;
 
 public class Horse extends Animal {
 
-	public Tiger sleep() {
+	public Horse sleep() {
 		System.out.println("Horse sleeps standing!!!");
-		return new Tiger();
+		return new Horse();
 	}
 
 	public Horse() {
