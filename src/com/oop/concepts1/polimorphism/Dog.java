@@ -8,17 +8,14 @@ public class Dog extends Animal {
 
 	public Dog() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	public Dog(int age) {
 		super(age);
-		// TODO Auto-generated constructor stub
 	}
 	
 	public Dog(String name) {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 	
 	@Override
@@ -29,7 +26,10 @@ public class Dog extends Animal {
 
 	@Override
 	public Animal sleep() {
-		// TODO Auto-generated method stub
+		new Dog() {
+			public void bark() {
+			}	
+		};
 		return null;
 	}
 
