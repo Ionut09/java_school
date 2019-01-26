@@ -1,29 +1,31 @@
 package com.test;
 
+import static java.lang.System.*;
 import static org.junit.Assert.*;
-
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.*;
 
 import com.exercises.CalculatorHomework;
 
 public class TestCalculator {
 
-	private CalculatorHomework calc;
+	private CalculatorHomework calc = new CalculatorHomework();
 
-	@Before
-	public void setUp() {
-		calc = new CalculatorHomework();
-	}
+//	@Before
+//	public void setUp() {
+//		calc = new CalculatorHomework();
+//	}
 
 	@Test
 	public void calculateTestSum() {
 		String operator = "+";
 		double a=5,b=4;
 		double result = calc.calculate(a, b, operator);
+		out.println("ui");
+		out.println();
 		assertEquals(9, result, 0.0);
 	}
 
+	
 	@Test
 	public void calculateTestDiv() {
 		String operator = "/";
