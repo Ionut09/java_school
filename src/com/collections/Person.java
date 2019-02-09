@@ -1,10 +1,9 @@
 package com.collections;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 import java.util.function.Predicate;
 
-public abstract class Person {
+public abstract class Person {//implements Comparable<Person> {
 
 	private String name;
 	private String cnp;
@@ -41,42 +40,53 @@ public abstract class Person {
 		this.age = age;
 	}
 
+//	@Override
+//	public int compareTo(Person person2) {
+//		// return this.name.compareTo(o.name); asta le sorteaza dupa nume
+//		if (this.age < person2.age) {
+//			return -1;
+//		} else if (this.age == person2.age) {
+//			return 0;
+//		}
+//		return 1;
+//	}
+
 	@Override
 	public String toString() {
 		return this.getClass().getSimpleName() + " [name=" + name + ", cnp=" + cnp + ", age=" + age + "]";
 	}
 
-	@Override
-	public int hashCode() {
-//		final int prime = 31;
-//		int result = 1;
-//		result = prime * result + ((cnp == null) ? 0 : cnp.hashCode());
-//		return result;
-		return (cnp == null) ? 0 : cnp.hashCode() * 31; // simplified
-
-	}
-
-	public boolean equals(Object obj) {
-		if (this == obj) {
-			return true;
-		}
-		if (obj == null) {
-			return false;
-		}
-		if (!(obj instanceof Person)) {
-			return false;
-		}
-		Person other = (Person) obj;
-
-		if (this.cnp == null) {
-			if (other.cnp != null) {
-				return false;
-			}
-		} else if (!cnp.equals(other.cnp)) {
-			return false;
-		}
-		return true;
-	}
+//	@Override
+//	public int hashCode() {
+////		final int prime = 31;
+////		int result = 1;
+////		result = prime * result + ((cnp == null) ? 0 : cnp.hashCode());
+////		return result;
+//		return (cnp == null) ? 0 : cnp.hashCode() * 31; // simplified
+//
+//	}
+//
+//	public boolean equals(Object obj) {
+//		if (this == obj) {
+//			return true;
+//		}
+//		if (obj == null) {
+//			return false;
+//		}
+//		if (!(obj instanceof Person)) {
+//			return false;
+//		}
+//		Person other = (Person) obj;
+//
+//		if (this.cnp == null) {
+//			if (other.cnp != null) {
+//				return false;
+//			}
+//		} else if (!cnp.equals(other.cnp)) {
+//			return false;
+//		}
+//		return true;
+//	}
 
 	public static void main(String[] args) {
 		List<Person> list = new ArrayList<>();
@@ -114,14 +124,21 @@ public abstract class Person {
 				return t.getCnp().equals("1273872138721");
 			}
 		};
-		Predicate<Person> filterLambda = (Person p) -> { 
+		Predicate<Person> filterLambda = (Person p) -> {
 			return p.getCnp().equals("1273872138721");
 		};
-		Predicate<Person> filterLambdaSimplified =  p -> p.getCnp().equals("1273872138721");
-		//list.removeIf(filterLambdaSimplified);
-		
-		list.removeIf((Person p) -> p.getCnp().equals("1273872138721")); //pt ca o lambda expression poatefi pasata direct inline
-		
+		Predicate<Person> filterLambdaSimplified = p -> p.getCnp().equals("1273872138721");
+		// list.removeIf(filterLambdaSimplified);
+
+		// list.removeIf((Person p) -> p.getCnp().equals("1273872138721")); //pt ca o
+		// lambda expression poate fi pasata direct inline
+
+		// void accept(T t);
+		list.forEach(person -> person.setName("IOnica"));
+		list.forEach((Person person) -> {
+			System.out.println(person.getName());
+		});
+
 	}
 
 }
