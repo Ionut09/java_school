@@ -3,7 +3,7 @@ package com.collections;
 import java.util.*;
 import java.util.function.Predicate;
 
-public abstract class Person {//implements Comparable<Person> {
+public abstract class Person implements Comparable<Person> {
 
 	private String name;
 	private String cnp;
@@ -40,16 +40,16 @@ public abstract class Person {//implements Comparable<Person> {
 		this.age = age;
 	}
 
-//	@Override
-//	public int compareTo(Person person2) {
-//		// return this.name.compareTo(o.name); asta le sorteaza dupa nume
-//		if (this.age < person2.age) {
-//			return -1;
-//		} else if (this.age == person2.age) {
-//			return 0;
-//		}
-//		return 1;
-//	}
+	@Override
+	public int compareTo(Person person2) {
+		// return this.name.compareTo(o.name); asta le sorteaza dupa nume
+		if (this.age < person2.age) {
+			return -1;
+		} else if (this.age == person2.age) {
+			return 0;
+		}
+		return 1;
+	}
 
 	@Override
 	public String toString() {
