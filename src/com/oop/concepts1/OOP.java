@@ -1,0 +1,14 @@
+package com.oop.concepts1;
+
+public class OOP {
+	
+	public static void main(String[] args) {
+		Car carObject = new Car();
+		
+		Color black = new Color("black metalizat");
+		Car carObject2 = new Car(50.3f, (byte)4, 100.5f, black);
+		
+		carObject.accelerate();
+	}
+	
+}
