@@ -1,0 +1,4 @@
+the content of the input file
+the content of the input file1
+the content of the input file2
+the content of the input file3
