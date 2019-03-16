@@ -18,6 +18,7 @@ public class ObjectSerialization {
 		Elev florinReloaded = (Elev) objectInputStream.readObject();
 		System.out.println(gicaReloaded.toJson()+"\n"+florinReloaded.toJson());
 		
+		//putem specifica marimea bufferului
 		BufferedReader reader = new BufferedReader(new FileReader("elev_in.txt"), 8 * 1024);
 		BufferedWriter writer = new BufferedWriter(new FileWriter("elev_out.txt", true));
 		writer.write(gica.toJson());
