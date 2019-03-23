@@ -1,4 +1,4 @@
-package com.java8;
+package com.java8.lambda;
 
 import java.util.Collections;
 import java.util.List;
