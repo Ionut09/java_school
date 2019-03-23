@@ -19,23 +19,13 @@ public class Streams {
 															new Transaction(mario, 2012, 710),
 															new Transaction(mario, 2012, 700), 
 															new Transaction(alan, 2012, 950));
-
-	/**
-	 * Find all transactions in the year 2011 and sort them by value (small to
-	 * high). What are all the unique cities where the traders work? Find all
-	 * traders from Cambridge and sort them by name. Return a string of all traders’
-	 * names sorted alphabetically. Are any traders based in Milan? Print all
-	 * transactions’ values from the traders living in Cambridge. What’s the highest
-	 * value of all the transactions? Find the transaction with the smallest value.
-	 */
 	public static void main(String[] args) {
-		// printList(findTransactionsFrom2011());
-		// printListString(getUniqueCities());
+//		printList(findTransactionsFrom2011());
+//		printListString(getUniqueCities());
 //		printListString(getTradersFromCity("Cambridge"));
 //		System.out.println(getTradersNames());
 //		String answer = areTradersInCity("Milan") ? "YES" : "NO";
 //		System.out.println("Are any traders based in Milan? --> " + answer);
-
 //		printTransactionsFromTradersLivingInCity("Cambridge");
 		System.out.println(findSmallestTransactionValue());
 	}
@@ -50,12 +40,12 @@ public class Streams {
 
 	private static List<Transaction> findTransactionsFrom2011() {
 		return transactions.stream() // Stream<Transaction>
-				.filter(transaction -> transaction.getYear() == 2011) // Stream<Transaction>
-				// .sorted((tr1, tr2) -> tr1.getValue() - tr2.getValue())
-				// .sorted(Comparator.comparing(tr -> tr.getValue()));
-				.sorted(Comparator.comparing(Transaction::getValue)) // foloseste obiectul de tip Transaction de pe
-																		// context ca sa apeleze getValue
-				.collect(Collectors.toList());
+							.filter(transaction -> transaction.getYear() == 2011) // Stream<Transaction>
+							// .sorted((tr1, tr2) -> tr1.getValue() - tr2.getValue())
+							// .sorted(Comparator.comparing(tr -> tr.getValue()));
+							.sorted(Comparator.comparing(Transaction::getValue)) // foloseste obiectul de tip Transaction de pe
+																					// context ca sa apeleze getValue
+							.collect(Collectors.toList());
 	}
 
 	/**
