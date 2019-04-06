@@ -62,7 +62,7 @@ public class MovieRepository {
 		return movieList;
 	}
 
-	private boolean updateMovie(Movie movie) {
+	public boolean updateMovie(Movie movie) {
 		try (Connection connection = getConnection()) {
 			String update = "update movie_info set year = 1999 where movie_id = ?";
 			PreparedStatement ps = connection.prepareStatement(update);
@@ -76,7 +76,7 @@ public class MovieRepository {
 		}
 	}
 
-	private boolean insertMovie(Movie movie) {
+	public boolean insertMovie(Movie movie) {
 		try (Connection connection = getConnection()) {
 			String insert = "insert into movie_info values(?, ?, ?, ?)";
 			PreparedStatement ps = connection.prepareStatement(insert);
