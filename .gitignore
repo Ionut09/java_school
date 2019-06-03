@@ -4,6 +4,8 @@
 .project
 .classpath
 /bin/
+.idea
+.iml
 
 # Log file
 *.log
